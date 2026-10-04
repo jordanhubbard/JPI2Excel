@@ -3,11 +3,18 @@
 Copyright © 2025-2026 by Alan M. Marcum, Nescorna Professional.
 All rights reserved.
 
-Revision: 11
+Revision: 12
 
 A Python CLI for validating legacy JP Instruments EDM-700/800 downloads and
 exporting flight data to CSV or Excel (`.xlsx`). Version 2 adds optional flight graphs. Application code lives in `src`,
 utilities in `pgms`, tests in `tests`, and the original fixtures in `testdata`.
+
+## Browser workspace
+
+A browser interface now supports local JPI import, interactive flight charts,
+recorded-limit checks, and direct Excel/CSV downloads. Parsing and Excel
+creation run on the user's device in a WebAssembly worker, using the same Python
+code as the CLI. See [browser setup and validation](docs/Browser.md).
 
 ## Run from this checkout
 

@@ -3,14 +3,15 @@
 Copyright © 2025-2026 by Alan M. Marcum, Nescorna Professional.
 All rights reserved.
 
-**Revision:** 12
-**Revision date:** 2026-10-02
+**Revision:** 13
+**Revision date:** 2026-10-03
 **Project:** JPI2Excel
 
 ## Revision history
 
 | Revision | Date | Summary |
 |---|---|---|
+| 13 | 2026-10-03 | Added browser workspace using Pyodide, TypeScript charts, local import/download, and recorded-limit observations; see Browser.md. |
 | 12 | 2026-10-02 | Added project copyright notices and preserved the complete MIT license in upstream-derived code. |
 | 11 | 2026-09-30 | Widened generated Excel windows to 36,860 twips using t4.xlsx. |
 | 10 | 2026-09-30 | Copied t2 opening-window geometry; flagged flights and sensor headers at inclusive limits; refined widths and labels. |
