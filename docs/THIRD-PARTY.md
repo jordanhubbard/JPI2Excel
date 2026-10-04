@@ -4,7 +4,7 @@ Project-specific documentation:
 Copyright © 2025-2026 by Alan M. Marcum, Nescorna Professional.
 All rights reserved.
 
-Revision: 3
+Revision: 4
 
 The project notice above does not replace or restrict the upstream MIT notice
 reproduced below.
@@ -53,3 +53,24 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+
+## Browser distribution
+
+- **Pyodide 0.29.3**, MPL-2.0, runs Python in a WebAssembly worker.
+  Unmodified source: https://github.com/pyodide/pyodide/tree/0.29.3
+  Python runtime version: 3.13.2 (PSF license).
+- **Apache ECharts 6.1.0**, Apache-2.0, and its zrender dependency implement
+  interactive browser charts. Source: https://github.com/apache/echarts
+- **React / React DOM 19.3.0**, MIT, implement the interface.
+  Source: https://github.com/facebook/react
+- **vinext 1.0.1**, MIT, and Vite provide application building/serving.
+  Source: https://github.com/cloudflare/vinext
+
+The browser preparation step copies the Python modules from the installed
+pinned dependencies into a generated ZIP; this ZIP retains JPI-Parser,
+openpyxl, and et-xmlfile license files. It is not committed to this repository.
+Pyodide and Python license texts are retained in `web/licenses/`. Generated
+`/runtime/` assets include those texts and license/notice files for ECharts,
+zrender, React, React DOM, scheduler, vinext, and React Server Components.
+The complete JavaScript dependency versions are locked in `web/package-lock.json`.

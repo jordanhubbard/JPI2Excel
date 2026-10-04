@@ -45,6 +45,12 @@ def main():
     shutil.copyfile(ROOT / 'COPYRIGHT', args.output / 'COPYRIGHT.txt')
     for license_file in (ROOT / 'web/licenses').glob('*.txt'):
         shutil.copyfile(license_file, args.output / license_file.name)
+    for package in ['echarts', 'zrender', 'react', 'react-dom', 'scheduler', 'vinext', 'react-server-dom-webpack']:
+        directory = ROOT / 'web/node_modules' / package
+        for name in ['LICENSE', 'NOTICE', 'LICENSE.md', 'THIRD_PARTY_LICENSES.md']:
+            source = directory / name
+            if source.is_file():
+                shutil.copyfile(source, args.output / f'{package}-{name}.txt')
     print(f'Prepared browser runtime in {args.output}')
 
 
