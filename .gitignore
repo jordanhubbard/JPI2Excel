@@ -1,7 +1,7 @@
 # Copyright © 2025-2026 by Alan M. Marcum, Nescorna Professional.
 # All rights reserved.
 
-# Revision: 2
+# Revision: 3
 .venv/
 __pycache__/
 *.py[cod]
@@ -15,3 +15,6 @@ dist/
 *.swp
 *.swo
 data/
+
+# Source plugin, not a generated build directory.
+!web/build/
